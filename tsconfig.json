@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {   
+        "outDir": "dist/js", //passando o diretorio que o compilador vai jogar o codigo js apos a compilacao
+        "target": "es6",    //passando a versao do js que vai ser utilizado
+        "noEmitOnError": true, //nao compila se o codigo ts tiver erros
+        "noImplicitAny": true //faz com que as variaveis não sejam atribuidas como any
+    },
+    "include": [
+        "app/**/*"  //passando o diretorio que ele vai compilar o codigo ts
+    ]
+}
+
+//opcao de compilacao do ts
