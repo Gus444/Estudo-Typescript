@@ -1,14 +1,14 @@
-import negociacao from "./negociacao.js";
+import Negociacao from "./negociacao.js";
 
 export default class NegociacoesModel{
 
-    private negociacoes: Array<negociacao> = [];//definindo oque vai estar dentro do array
+    private negociacoes: Array<Negociacao> = [];//definindo oque vai estar dentro do array
 
-    adiciona(negociacao: negociacao){
+    public adiciona(negociacao: Negociacao){
         this.negociacoes.push(negociacao)
     }
 
-    lista(): ReadonlyArray<negociacao>{//ReadonlyArray evita ques os dados da lista sejam alterados
+    public lista(): ReadonlyArray<Negociacao>{//ReadonlyArray evita ques os dados da lista sejam alterados
         return this.negociacoes
 
         /*Tambem tem o spread operator [...] para criar uma copia do array original de negociacao,

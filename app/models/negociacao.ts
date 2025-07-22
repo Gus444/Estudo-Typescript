@@ -1,4 +1,4 @@
-export default class negociacao{
+export default class Negociacao{
 
     private _data: Date //no ts 'private' deixa os atributos privados ao inves de # como no js
     private _quantidade: number//caso nao tenha private no nome ele sera automaticamente 'public'
@@ -21,5 +21,15 @@ export default class negociacao{
 
     get valor(): number{
         return this._valor;
+    }
+
+    public static criaDe(dataString: string, quantidadeString: string, valorString: string): Negociacao{
+    //metodos static sempre precisam ser public pois será acessado de outras classes quando chamado
+    
+        const exp = /-/g;//expressao regular
+        const date = new Date(dataString.replace(exp, ','));//substituindo '/' por ,
+        const quantidade = parseInt(quantidadeString);
+        const valor = parseFloat(valorString);
+        return new Negociacao(date, quantidade, valor);
     }
 }
