@@ -3,7 +3,9 @@
         "outDir": "dist/js", //passando o diretorio que o compilador vai jogar o codigo js apos a compilacao
         "target": "es6",    //passando a versao do js que vai ser utilizado
         "noEmitOnError": true, //nao compila se o codigo ts tiver erros
-        "noImplicitAny": true //faz com que as variaveis não sejam atribuidas como any
+        "noImplicitAny": true, //faz com que as variaveis não sejam atribuidas como any
+        "removeComments": true, //remove comentarios do codigo compilado em js
+        "strictNullChecks": true //faz com que as variaveis não aceitem null
     },
     "include": [
         "app/**/*"  //passando o diretorio que ele vai compilar o codigo ts
